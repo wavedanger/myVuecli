@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # wangeditor
 
 ## Project setup
@@ -22,3 +23,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# myVuecli
+Customize  own vue-cli
+>>>>>>> 619622a4b7a2c7bc2c08b19cf97f90b41a811ee2
