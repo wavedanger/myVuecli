@@ -1,47 +1,43 @@
 <template>
     <div class="container">
         <el-row>
-            <el-col :span="24">
-                <el-input
-                    class="s-input"
-                    v-model="question"
-                    placeholder="请输入问题"
-                ></el-input>
-                <el-button @click="askSaiDiaoAi" type="primary"
-                    >咨询瞎搞AI</el-button
-                >
-            </el-col>
-        </el-row>
-        <el-row>
-            <el-col :span="24">
-                <el-input
-                    class="s-input"
-                    v-model="qq"
-                    placeholder="请输入qq号"
-                ></el-input>
-                <el-button @click="getQQlevel" type="warning"
-                    >获取qq等级</el-button
-                >
-            </el-col>
-        </el-row>
-        <el-row>
-            <el-col :span="24">
-                <el-input
-                    class="s-input"
-                    v-model="today"
-                    placeholder="输入月日，如：1225"
-                ></el-input>
-                <el-button @click="getEventHistory" type="danger"
-                    >历史上的今天</el-button
-                >
-            </el-col>
-        </el-row>
-        <el-row>
-            <el-col :span="24">
-            <pre class="code">
+            <el-col :span="16">
+                <pre class="code">
                 {{ returnJSON }}
             </pre
                 >
+            </el-col>
+            <el-col :span="8">
+                <div class="item">
+                    <el-input
+                        class="s-input"
+                        v-model="question"
+                        placeholder="请输入问题"
+                    ></el-input>
+                    <el-button @click="askSaiDiaoAi" type="primary"
+                        >咨询瞎搞AI</el-button
+                    >
+                </div>
+                <div class="item">
+                    <el-input
+                        class="s-input"
+                        v-model="qq"
+                        placeholder="请输入qq号"
+                    ></el-input>
+                    <el-button @click="getQQlevel" type="warning"
+                        >获取qq等级</el-button
+                    >
+                </div>
+                <div class="item">
+                    <el-input
+                        class="s-input"
+                        v-model="today"
+                        placeholder="输入月日，如：1225"
+                    ></el-input>
+                    <el-button @click="getEventHistory" type="danger"
+                        >历史上的今天</el-button
+                    >
+                </div>
             </el-col>
         </el-row>
     </div>
@@ -105,7 +101,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container {
-    min-width: 480px;
+    min-width: 1100px;
+}
+.item{
+    margin:10px 0px;
 }
 .s-input {
     width: 180px;
@@ -133,7 +132,7 @@ ol {
     color: white;
     background-color: #252637;
     overflow: auto;
-    width: 600px;
+    width: 100%;
     height: 600px;
     margin: 0 auto;
     border-radius: 5px;
